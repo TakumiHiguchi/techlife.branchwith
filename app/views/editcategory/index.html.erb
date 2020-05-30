@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag "editpost", :media => "all" %>
+<%= render 'tmp/header' %>
+<div class="editPostContainer">
+    <%= render 'tmp/epMenu' %>
+    <div class="mainContainer">
+        <table>
+            <tbody>
+                <tr><th>id</th><th>name</th><th>parent_id</th></tr>
+                <% @categorydatas.each do |pass| %>
+                    <tr><td><%= pass.id %></td><td><%= pass.name %></td><td><%= pass.parent_id %></td><td><a href="/editcategory/<%= pass.id %>/edit">編集</a></td>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

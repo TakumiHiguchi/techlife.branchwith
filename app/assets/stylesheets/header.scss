@@ -1,0 +1,57 @@
+$inpWidth:1000px;
+$headerHeight:50px;
+$maxWidth:100%;
+//--------------------------------------------------------------------------------
+//                                   ヘッダー -PC
+//--------------------------------------------------------------------------------
+.main_header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    width:$inpWidth;
+    height:$headerHeight;
+    background:#444;
+    padding:2px calc(calc(#{$maxWidth} - #{$inpWidth})/2);
+    margin:0;
+    .top_icon{
+        height:100%;
+        h1{
+            height:100%;
+            img{
+                height:100%;
+            }
+        }
+        img{
+            height:100%;
+        }
+    }
+    div{
+        display:flex;
+        .twitter_icon{
+            height:100%;
+            margin-right:10px;
+        }
+        .twitter_icon:before {
+            font-family: "Font Awesome 5 Brands";
+            content: '\f099';
+            color:white;
+            font-size:calc(#{$headerHeight} - 20px);
+            line-height:$headerHeight;
+        }
+        .fa-instagram{
+            color:white;
+            font-size:calc(#{$headerHeight} - 20px);
+            line-height:$headerHeight;
+            margin-right:10px;
+        }
+        .sk{
+            text-decoration:none;
+        }
+    }
+}
+@media screen and (max-width: 1023px) {
+    .main_header{
+        width:calc(100% - 10px);
+        padding-left:10px;
+    }
+}

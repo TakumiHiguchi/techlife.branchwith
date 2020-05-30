@@ -1,0 +1,737 @@
+@charset "UTF-8";
+/* line 6, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+  color: #494949;
+}
+
+/* line 16, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* line 20, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+body {
+  background: #f8f8f8;
+}
+
+/* line 24, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+blockquote {
+  background: #f8f8f8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.19);
+  padding: 15px;
+  border-radius: 5px;
+  width: calc(100% - 30px);
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* line 33, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+blockquote p {
+  margin: 0 0 10px 0 !important;
+}
+/* line 36, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+blockquote::-webkit-scrollbar {
+  display: none;
+}
+/* line 39, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+blockquote pre {
+  font-size: 0.8em;
+}
+
+/* line 43, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.fix {
+  position: fixed;
+}
+
+/* line 46, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.adminfixedbox {
+  bottom: 0;
+  left: 0;
+}
+
+/* line 50, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.adminInf {
+  width: 18%;
+  height: 25%;
+  background: white;
+  border: 1px solid #808080;
+  border-radius: 0 10px 0 0;
+  padding: 10px;
+}
+/* line 58, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.adminInf div a {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 64, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .title_input {
+    width: 100%;
+  }
+
+  /* line 67, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .code-flame {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: scroll;
+    background-color: #364549;
+    color: #e3e3e3;
+    padding: 0 20px;
+    margin: 0px -20px 40px -20px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* line 78, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .code-flame::-webkit-scrollbar {
+    display: none;
+  }
+  /* line 81, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .code-flame code {
+    display: block;
+    padding: 0;
+    margin: 0px;
+    border: none;
+    line-height: 1.8;
+    color: white;
+    font-size: 0.8em;
+  }
+
+  /* line 94, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 20px 0;
+  }
+  /* line 99, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 106, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame {
+    width: calc(1000px - 310px);
+    margin-right: 10px;
+  }
+  /* line 109, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .topContainer {
+    width: calc(100% - 40px);
+    padding: 10px 20px 20px 20px;
+    margin: 10px 0px 0 0;
+    background: white;
+  }
+  /* line 114, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .topContainer ul {
+    margin: 0;
+  }
+  /* line 116, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .topContainer ul li {
+    line-height: 1.5em;
+  }
+  /* line 121, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer {
+    width: calc(100% - 40px);
+    padding: 10px 20px 20px 20px;
+    margin: 10px 0px 0 0;
+    background: white;
+  }
+  /* line 126, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer h3 {
+    font-weight: 580;
+    color: #808080;
+  }
+  /* line 130, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer p {
+    font-size: 0.8em;
+  }
+  /* line 133, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .name_input {
+    color: #494949;
+    border: 0;
+    padding: 5px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    border: solid 1px #ccc;
+    width: calc(50% - 10px);
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+  }
+  /* line 145, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .submit-input {
+    background: white;
+    border-radius: 25px;
+    display: block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: 1px solid #00acee;
+    color: #00acee;
+    text-align: center;
+    transition: all  0.5s ease;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* line 158, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .submit-input:hover {
+    background: #00acee;
+    color: white;
+  }
+  /* line 163, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    font-size: 1em;
+  }
+  /* line 169, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .comentBox {
+    width: 100%;
+    min-height: 100px;
+    border-bottom: 1px solid #aaa;
+    margin: 10px 0;
+  }
+  /* line 174, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .comentBox .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  /* line 179, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .comentBox .bottom {
+    padding: 0 0 10px 0;
+    line-height: 2em;
+  }
+  /* line 185, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox {
+    width: calc(100% - 40px);
+    height: 100%;
+    padding: 40px 20px 20px 20px;
+    margin: 10px 0px 0 0;
+    background: white;
+  }
+  /* line 191, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox img {
+    width: 100%;
+    margin: 10px 0;
+  }
+  /* line 195, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox blockquote {
+    margin: 10px 0;
+  }
+  /* line 198, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox p {
+    line-height: 2em;
+    margin: 0 0 50px 0;
+  }
+  /* line 202, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox ul, .articleContainer main .main_flame .articleBox ol {
+    margin: 20px 0 50px 30px;
+  }
+  /* line 205, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox .bold {
+    font-weight: bold;
+  }
+  /* line 208, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox .quoteBox {
+    width: 100%;
+    font-size: 0.8em;
+    text-align: right;
+  }
+  /* line 213, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h2 {
+    position: relative;
+    font-weight: 580;
+    padding: 5px;
+    margin: 10px 0;
+    font-weight: bold;
+    background: #66cdaa;
+    color: #fffafa;
+  }
+  /* line 222, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h3 {
+    position: relative;
+    font-weight: bold;
+    font-size: 1em;
+    color: #808080;
+    padding: 2px 30px;
+    margin: 5px 0 25px 0;
+  }
+  /* line 229, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h3:before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: '';
+    background: #E0E7AA;
+    width: 0.8em;
+    height: 0.8em;
+  }
+  /* line 241, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h4 {
+    position: relative;
+    font-weight: bold;
+    font-size: 1em;
+    color: #808080;
+    padding: 2px 0 2px 40px;
+    margin: 5px 0 10px 0;
+  }
+  /* line 248, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h4:before {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: '';
+    background: #E0E7AA;
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  /* line 264, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-h1 {
+    padding: 20px 20px 0 20px;
+    background: white;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+
+  /* line 270, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    padding: 10px 20px 10px 30px;
+    background: white;
+    color: #808080;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  /* line 279, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box div {
+    display: flex;
+    align-items: center;
+  }
+  /* line 282, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box div a {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  /* line 287, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box div a img {
+    height: 100%;
+    width: 30px;
+    margin-right: 10px;
+  }
+
+  /* line 300, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  /* line 305, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box dl {
+    width: 100%;
+  }
+  /* line 307, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box dl dt {
+    position: relative;
+    font-weight: 580;
+    color: #808080;
+  }
+  /* line 313, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box dl dd a {
+    text-decoration: none;
+    line-height: 1.5em;
+  }
+  /* line 316, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box dl dd a:hover {
+    text-decoration: underline;
+  }
+
+  /* line 323, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .lv_H2 a {
+    padding-left: 10px;
+    color: #494949;
+  }
+
+  /* line 324, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .lv_H3 a {
+    padding-left: 30px;
+    color: #494949;
+  }
+
+  /* line 325, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .attrb {
+    margin: 20px 0;
+  }
+}
+@media screen and (max-width: 1023px) {
+  /* line 336, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+  }
+  /* line 341, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer img {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  /* line 347, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main {
+    width: 100%;
+  }
+  /* line 349, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame {
+    width: 100%;
+    margin-right: 10px;
+  }
+  /* line 352, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .topContainer {
+    width: calc(100% - 20px);
+    height: 100%;
+    padding: 10px;
+    background: white;
+  }
+  /* line 357, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .topContainer ul {
+    margin: 0;
+  }
+  /* line 359, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .topContainer ul li {
+    line-height: 1.5em;
+  }
+  /* line 364, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer {
+    width: calc(100% - 20px);
+    height: 100%;
+    padding: 10px;
+    background: white;
+  }
+  /* line 369, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer h3 {
+    font-weight: 580;
+    color: #808080;
+  }
+  /* line 373, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer p {
+    font-size: 0.8em;
+  }
+  /* line 376, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .name_input {
+    color: #494949;
+    border: 0;
+    padding: 5px;
+    font-size: 1em;
+    font-family: Arial, sans-serif;
+    border: solid 1px #ccc;
+    width: calc(50% - 10px);
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+  }
+  /* line 388, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .submit-input {
+    background: white;
+    border-radius: 25px;
+    display: block;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border: 1px solid #00acee;
+    color: #00acee;
+    text-align: center;
+    transition: all  0.5s ease;
+    font-size: 0.8em;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* line 401, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .submit-input:hover {
+    background: #00acee;
+    color: white;
+  }
+  /* line 406, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer textarea {
+    resize: none;
+    height: 200px;
+    font-size: 1em;
+  }
+  /* line 411, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .comentBox {
+    width: 100%;
+    min-height: 100px;
+    border-bottom: 1px solid #aaa;
+    margin: 10px 0;
+  }
+  /* line 416, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .comentBox .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  /* line 421, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .comentContainer .comentBox .bottom {
+    padding: 0 0 10px 0;
+    line-height: 2em;
+  }
+  /* line 427, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox {
+    width: calc(100% - 20px);
+    height: 100%;
+    padding: 10px;
+    background: white;
+  }
+  /* line 432, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox img {
+    width: 100%;
+    margin: 10px 0;
+  }
+  /* line 436, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox blockquote {
+    margin: 10px 0;
+  }
+  /* line 439, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox p {
+    line-height: 2em;
+    margin: 20px 0;
+  }
+  /* line 443, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox ul, .articleContainer main .main_flame .articleBox ol {
+    margin: 20px 0 20px 30px;
+  }
+  /* line 446, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox .bold {
+    font-weight: bold;
+  }
+  /* line 449, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox .quoteBox {
+    width: 100%;
+    font-size: 0.8em;
+    text-align: right;
+  }
+  /* line 454, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h2 {
+    position: relative;
+    font-weight: 580;
+    padding: 5px;
+    margin: 10px 0;
+    font-weight: bold;
+    background: #66cdaa;
+    color: #fffafa;
+  }
+  /* line 463, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h3 {
+    position: relative;
+    font-weight: bold;
+    font-size: 1em;
+    color: #808080;
+    padding: 2px 30px;
+    margin: 5px 0 10px 0;
+  }
+  /* line 470, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h3:before {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: '';
+    background: #E0E7AA;
+    width: 0.8em;
+    height: 0.8em;
+  }
+  /* line 482, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h4 {
+    position: relative;
+    font-weight: bold;
+    font-size: 1em;
+    color: #808080;
+    padding: 2px 0 2px 40px;
+    margin: 5px 0 10px 0;
+  }
+  /* line 489, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .articleContainer main .main_flame .articleBox h4:before {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    content: '';
+    background: #E0E7AA;
+    width: 0.8em;
+    height: 0.8em;
+  }
+
+  /* line 505, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-h1 {
+    padding: 20px 20px 0 20px;
+    background: white;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+
+  /* line 511, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box {
+    height: 30px;
+    padding: 10px;
+    background: white;
+    color: #808080;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  /* line 517, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* line 521, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box div a {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+  }
+  /* line 526, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box div a img {
+    height: 100%;
+    width: 30px;
+    margin-right: 10px;
+  }
+  /* line 532, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .inpPost-auther_date_box div time, .inpPost-auther_date_box div span {
+    font-size: 0.8em;
+  }
+
+  /* line 541, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box {
+    width: calc(100% - 20px);
+    padding: 10px;
+    background: white;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  /* line 546, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box dl {
+    width: 100%;
+  }
+  /* line 548, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box dl dt {
+    position: relative;
+    font-weight: 580;
+    color: #808080;
+  }
+  /* line 554, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .toc_box dl dd a {
+    text-decoration: none;
+  }
+
+  /* line 560, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .lv_H2 a {
+    padding-left: 10px;
+    color: #494949;
+  }
+
+  /* line 561, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .lv_H3 a {
+    padding-left: 30px;
+    color: #494949;
+  }
+
+  /* line 562, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .attrb {
+    margin: 20px 0;
+  }
+
+  /* line 565, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .adminInf {
+    display: none;
+  }
+
+  /* line 568, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .title_input {
+    width: calc(100% - 20px);
+  }
+
+  /* line 571, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .code-flame {
+    display: block;
+    position: relative;
+    width: calc(100% - 10px);
+    overflow: scroll;
+    background-color: #364549;
+    color: #e3e3e3;
+    padding: 0 20px;
+    margin: 0px -20px 40px 0px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* line 582, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .code-flame::-webkit-scrollbar {
+    display: none;
+  }
+  /* line 585, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+  .code-flame code {
+    display: block;
+    padding: 0;
+    margin: 0px;
+    border: none;
+    line-height: 1.8;
+    color: white;
+    font-size: 0.8em;
+  }
+}
+/* line 597, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.box1 {
+  position: relative;
+  margin: 2em 0;
+  padding: 30px 15px;
+  border: solid 3px #00aced;
+  border-radius: 8px;
+}
+/* line 603, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.box1 .cont {
+  line-height: 2em;
+}
+/* line 606, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.box1 p {
+  margin: 5px 0 !important;
+}
+
+/* line 610, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+.box1 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 9px;
+  line-height: 1;
+  font-size: 19px;
+  background: #FFF;
+  color: #00aced;
+  font-weight: bold;
+}
+
+/* line 624, /Users/higuchitakumi/techlife/app/assets/stylesheets/posts.scss */
+video {
+  width: 100%;
+  margin-bottom: 10px;
+}

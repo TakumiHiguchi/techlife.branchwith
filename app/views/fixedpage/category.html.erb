@@ -1,0 +1,53 @@
+<% provide(:index,"noindex") %>
+<% provide(:title,@cad.name) %>
+<%#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+<%= render 'tmp/header' %>
+<div class="articleContainer">
+    <main>
+        <div class="main_flame">
+            <div class="category-h flex-center">
+                <div><p>- categroy -</p><h1><%= @cad.name %></h1></div>
+            </div>
+            <div class="articleBox">
+                <% @postdatas.each do |pass| %>
+                            <% pass.post_category_relations.each do |a| %>
+                                <% if a.category.key == params[:id] then %>
+                                        <div href="article/<%= pass.key %>" class="postsDatabox">
+                                            <div class="left">
+                                                <img "alt="<%= pass.title %>のサムネイル" src="<%= $url_at %>/techlife/thum/<%= pass.thumbnail_path %>" />
+                                            </div>
+                                            <div class="right">
+                                                <h2 id="aks"><%= pass.title %></h2>
+                                                <div class="linkbox">
+                                                <% pass.post_category_relations.each do |a| %>
+                                                    <a href="/category/<%= a.category.key %>" class="fas fa-book icon" target="_blank"><span> <%= a.category.name %></span></a>
+                                                <% end %>
+                                                </div>
+                                                <div class="date">Author : Takumi&nbsp;<%= pass.updated_at.strftime('%Y年%m月%d日') %></div>
+                                            </div>
+                                        </div>
+                                        <div class="content_area">
+                                            <%= strip_tags(pass.content).truncate(200) %>
+                                            <p style="font-weight:bold;">記事のポイント</p>
+                                            <div><%= pass.pickup_content.html_safe %></div>
+                                        </div>
+                                        <a href="/article/<%= pass.key %>"class="nbtn alo">この記事を読む</a>
+                                <% end %>
+                            <% end %>
+                <% end %>
+            </div>
+
+        </div>
+    </main>
+    <%= render 'tmp/sidebar_top' %>
+</div>
+<%= render 'tmp/footer' %>
+<% if signed_in? then %><%# 管理者か確認 %>
+<div class="fix adminfixedbox adminInf">
+    <div>URL : <%=request.url%></div>
+    <div>PV : </div>
+    <div>author : </div>
+    <div>Links : <a href="/editpost">Postの編集</a></div>
+</div>
+<% end %>

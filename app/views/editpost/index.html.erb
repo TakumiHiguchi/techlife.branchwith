@@ -1,0 +1,14 @@
+<%= render 'tmp/header' %>
+<div class="editPostContainer">
+    <%= render 'tmp/epMenu' %>
+    <div class="mainContainer">
+        <table>
+            <tbody>
+                <tr><th>タイトル</th><th>key</th><th></th></tr>
+                <% @postdatas.each do |pass| %>
+                    <tr><td><%= pass.title %></td><td><%= pass.key %></td><td><a href="/editpost/<%= pass.id %>/edit">編集</a></td>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

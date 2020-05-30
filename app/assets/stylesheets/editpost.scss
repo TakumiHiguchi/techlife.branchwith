@@ -1,0 +1,69 @@
+// Place all the styles related to the editpost controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+    color:#494949;
+}
+html,body{
+    height:100%;
+}
+body{
+    background:#f8f8f8;
+}
+.editPostContainer{
+    display:flex;
+    width:100%;
+    height:calc(100% - 50px);
+    .ePmenu{
+        width:240px;
+        background:red;
+        padding:10px 0 10px 10px;
+        .box{
+            display:block;
+            width:calc(100% - 20px);
+            padding:10px;
+            border-radius:10px 0 0 10px;
+            text-decoration:none;
+            &:hover{
+                background:white;
+            }
+        }
+    }
+    .mainContainer{
+        width:calc(100% - 270px);
+        padding:10px;
+    }
+}
+input{
+    margin:0 0 10px 0;
+}
+textarea{
+    width:100%;
+    height:500px;
+}
+.t-fieldbox{
+    display:flex;
+    input{
+        margin-right:10px;
+        width:20%;
+    }
+}
+.title_input {
+    color:#494949;
+    border:0;
+    padding:10px;
+    font-size:1.3em;
+    font-family:Arial, sans-serif;
+    border:solid 1px #ccc;
+    width:calc(100% - 20px);
+    -moz-box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 1px 4px 9px -6px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 4px 9px -6px rgba(0,0,0,0.5);
+}

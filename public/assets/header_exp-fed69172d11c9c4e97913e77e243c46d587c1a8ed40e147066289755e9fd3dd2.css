@@ -1,0 +1,62 @@
+/* line 7, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  height: 50px;
+  padding: 2px calc(calc(100% - 1000px)/2);
+  margin: 0;
+}
+/* line 15, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .top_icon {
+  height: 100%;
+}
+/* line 17, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .top_icon h1 {
+  height: 100%;
+}
+/* line 19, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .top_icon h1 img {
+  height: 100%;
+}
+/* line 23, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .top_icon img {
+  height: 100%;
+}
+/* line 27, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div {
+  display: flex;
+}
+/* line 29, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .twitter_icon {
+  height: 100%;
+  margin-right: 10px;
+}
+/* line 33, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .twitter_icon:before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f099';
+  color: white;
+  font-size: calc(50px - 20px);
+  line-height: 50px;
+}
+/* line 40, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .fa-instagram {
+  color: white;
+  font-size: calc(50px - 20px);
+  line-height: 50px;
+  margin-right: 10px;
+}
+/* line 46, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .sk {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 52, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+  .main_header {
+    width: calc(100% - 10px);
+    padding-left: 10px;
+  }
+}

@@ -1,0 +1,189 @@
+
+<%# タイトル等設定 %>
+<% provide(:title,"Bitcoin exproler") %>
+<% provide(:description,"techlife.branchwithでブロックチェーンをもっと身近に。Make blockchain more accessible") %>
+<% provide(:tw_img,"https://hiiragi000.xsrv.jp/images/portfolio/bitcoinex1.jpeg") %>
+<%#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+
+
+<%= render 'tmp/header_exp' %>
+
+<% ua = request.env["HTTP_USER_AGENT"]
+if(ua.include?('Mobile') || ua.include?('Android')) then %>
+    <main class="ind">
+        <div class="wrapper">
+            <div class="blockContainer">
+                <% for n in 0.. 30 do %>
+                    <div class="base" style="margin-top: -4px;">
+                        <div class="cube">
+                            <% if n==0 then %>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_front">No.<span class="Btarget"><%= @k["height"].to_i-n %></span></a>
+                                <div class="s_back b0"></div><div class="s_right b0"></div><div class="s_top b0 t0" style="display:none;"></div><div class="s_bottom"></div>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_left"><i class="fab fa-btc"></i></a>
+                            <% else %>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_front">No.<%= @k["height"].to_i-n %></a>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_left"><i class="fab fa-btc"></i></a>
+                            <% end %>
+                            <div class="s_bottom"></div>
+                        </div>
+                    </div>
+                <% end %>
+                <div class="fix-inf">
+                    <div>
+                        <p>現在の高さ: <span id="height"><%=@k["height"].to_i.to_s(:delimited)%></span> m(blocks)</p>
+                        <p>メモリプール: <span id="mem"><%= @k["mempool"]["size"] %></span> TX</p>
+                        <p>メモリプールサイズ: <span id="memBytes"><%= @k["mempool"]["bytes"] %></span> Bytes</p>
+                        <p>最後に採掘されてから: <span id="time"></span>秒</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<% else %>
+    <main class="ind">
+        <div class="wrapper">
+            <div class="blockContainer">
+                <% for n in 0.. 30 do %>
+                    <div class="base" style="margin-top: -4px;">
+                        <div class="cube">
+                            <% if n==0 then %>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_front">No.<span class="Btarget"><%= @k["height"].to_i-n %></span></a>
+                                <div class="s_back b0"></div><div class="s_right b0"></div><div class="s_top b0 t0" style="display:none;"></div><div class="s_bottom"></div>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_left"><i class="fab fa-btc"></i></a>
+                            <% else %>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_front">No.<%= @k["height"].to_i-n %></a>
+                                <a href="/blockchain/btc_exproler/block/<%= @k["height"].to_i-n %>" class="s_left"><i class="fab fa-btc"></i></a>
+                            <% end %>
+                            <div class="s_bottom"></div>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+            <div class="cloudContainer">
+                <div class="fix-inf">
+                    <div>
+                        <p>現在の高さ: <span id="height"><%=@k["height"].to_i.to_s(:delimited)%></span> m(blocks)</p>
+                        <p>メモリプール: <span id="mem"><%= @k["mempool"]["size"] %></span> TX</p>
+                        <p>メモリプールサイズ: <span id="memBytes"><%= @k["mempool"]["bytes"] %></span> Bytes</p>
+                        <p>最後に採掘されてから: <span id="time"></span>秒</p>
+
+                    </div>
+                </div>
+                <div class="stick"></div>
+                <div class="left_cloud">
+                    <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/cloud.png" alt="雲"/>
+                    <div class="left_child">
+                        <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/child1.png" alt="小人"/>
+                        <div class="front_arm">
+                            <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/arm_front1.png" alt="腕"/>
+                        </div>
+                        <div class="back_arm">
+                            <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/arm_back1.png" alt="腕"/>
+                        </div>
+                        <div class="ore" id="orel0">
+                            <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/ore1.png" alt="鉱石"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="right_cloud">
+                    <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/cloud.png" alt="雲"/>
+                    <div class="right_child">
+                        <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/child2.png" alt="小人"/>
+                        <div class="front_arm">
+                            <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/arm_front2.png" alt="腕"/>
+                        </div>
+                        <div class="back_arm">
+                            <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/arm_back2.png" alt="腕"/>
+                        </div>
+                        <div class="ore" id="orer0">
+                            <img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/ore1.png" alt="鉱石"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixchr"><p>Created by Takumi( <a href="https://twitter.com/taku_blockchain" class="fab fa-twitter twitter_icon" target="_blank"> Twitter</a><a href="/portfolio" class="fas fa-book icon" target="_blank"><span>  Portfolio</span></a> )</p></div>
+
+    </main>
+
+<% end %>
+
+<%= render 'tmp/footer' %>
+
+
+
+
+
+
+
+<script>
+    var count = 0;
+    var oc=0;
+    var otc=0;
+    var blockheight=parseInt($('.Btarget').text());
+    $(function() {
+        setInterval(addblock(), 1000);
+    });
+    var getd = function(){
+       var request = new XMLHttpRequest();
+    
+       request.open('GET', 'https://techlife.branchwith.com/api/bitcoin', true);
+       request.responseType = 'json';
+    
+       request.onload = function () {
+         var data = this.response;
+         $('#mem').text(data["mempool"]["size"]);
+         $('#memBytes').text(data["mempool"]["bytes"]);
+         
+         if(blockheight<parseInt(data["height"])){
+                blockheight=parseInt(data["height"]);
+                setInterval(addblock(), 1);
+        }
+        $('#height').text(data["height"]);
+        
+        var date = new Date() ;
+        $('#time').text(Math.floor( date.getTime() / 1000 ) - parseInt(data["time"]));
+         
+       };
+       request.send();
+       
+    }
+    var addblock = function(){
+        var bn=blockheight+1;
+        count+=1;
+        $('.blockContainer').prepend('<div class="base k'+count+'" style="margin-top: -4px;display:none;"><div class="cube"><a href="/blockchain/btc_exproler/block/'+bn+'" class="s_front"><span class="s'+count+'" style="display:none;">No.<span class="c'+count+'"></span></span></a><div class="s_back b'+count+'" ></div><div class="s_right b'+count+'"></div><a href="/blockchain/btc_exproler/block/'+bn+'" class="s_left"><i class="fab fa-btc"></i></a><div class="s_top b'+count+' t'+count+'" style="display:none;"></div><div class="s_bottom"></div></div>');
+        $('.t'+(count-1)).fadeIn(1000);
+         $('.blockContainer').animate({
+             "margin-top": "100px"
+         },2000,'swing',function(){
+            $('.back').css('height',$(document).height());
+            $('.k'+count).fadeIn(2000);
+            $('.b'+(count-1)).fadeOut(2000);
+            $('.s'+(count-1)).fadeIn(1000);
+            $('.blockContainer').css('margin-top',"0");
+            $('.c'+count).text(bn);
+         });
+
+    }
+    
+    var addoreLeft= function(){
+        oc++;
+        $('.left_child').append('<div class="ore" id="orel'+oc+'"><img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/ore'+(Math.round( Math.random()*2 )+1)+'.png" alt="鉱石"/></div>');
+        $('#orel'+(oc-2)).remove();
+    }
+    var addoreRight= function(){
+        otc++;
+        $('.right_child').append('<div class="ore" id="orer'+otc+'"><img src="https://hiiragi000.xsrv.jp/images/blockchain/bitcoin/ore'+(Math.round( Math.random()*2)+1)+'.png" alt="鉱石"/></div>');
+        $('#orer'+(otc-4)).remove();
+    }
+    setInterval(getd, 500);
+    setTimeout(function(){
+        setInterval(addoreLeft, 2000);
+    }, 2000);
+    setTimeout(function(){
+        setInterval(addoreRight, 4000);
+    }, 4000);
+    
+</script>

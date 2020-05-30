@@ -1,0 +1,81 @@
+/* line 7, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  height: 50px;
+  padding: 2px calc(calc(100% - 1000px)/2);
+  margin: 0;
+}
+/* line 15, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .top_icon {
+  height: 100%;
+}
+/* line 17, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .top_icon img {
+  height: 100%;
+}
+/* line 21, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .headlinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+/* line 27, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .headlinks a {
+  text-decoration: none;
+  color: white;
+}
+/* line 30, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header .headlinks a:first-child {
+  margin-right: 10px;
+}
+/* line 35, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 39, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .twitter_icon {
+  height: 100%;
+  margin-right: 10px;
+}
+/* line 43, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .twitter_icon:before {
+  font-family: "Font Awesome 5 Brands";
+  content: '\f099';
+  color: white;
+  font-size: calc(50px - 20px);
+  line-height: 50px;
+}
+/* line 50, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .fa-instagram {
+  color: white;
+  font-size: calc(50px - 20px);
+  line-height: 50px;
+  margin-right: 10px;
+}
+/* line 56, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .sk {
+  text-decoration: none;
+}
+/* line 59, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+.main_header div .fa-btc {
+  text-decoration: none;
+  color: white;
+  margin-right: 15px;
+  font-size: calc(50px - 20px);
+  line-height: 50px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 69, /Users/higuchitakumi/techlife/app/assets/stylesheets/header_exp.scss */
+  .main_header {
+    width: calc(100% - 10px);
+    padding-left: 10px;
+  }
+}

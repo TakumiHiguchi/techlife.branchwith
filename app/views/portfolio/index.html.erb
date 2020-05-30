@@ -1,0 +1,408 @@
+<%# タイトル等設定 %>
+<% provide(:title,"Takumi's portfolio") %>
+<% provide(:description,"Webエンジニア&Block chainエンジニアのTakumiのポートフォリオです。私がこれまでに手がけた制作物、身につけたスキルをまとめています。") %>
+<%#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+
+<header class="mastheader">
+    <div class="header-container text-center">
+        <h1 class="headfont1">Takumi's portfolio</h1>
+        <p class="headfont2 er-1">Web Enginner/Blockchain Engineer</p>
+        <div class="flex-center">
+            <a class="nextbox topns sm-1" href="#Am">Who is me?</a>
+            <a class="nextbox topns" href="#contact">contact</a>
+        </div>
+    </div>
+    <a class="nextarrow fuwa_box" href="#ats">
+        <div class="arrow"></div>
+    </a>
+</header>
+<section class="content-container text-center flex-center ats" id="ats">
+    <div class="ats-box">
+    <img class="fuwa_box" "alt="ブロック" src="<%= $url_at %>/portfolio/block.png" />
+        <h2>About this site</h2>
+        <p class="sm-2">このサイトはエンジニアTakumiのポートフォリオサイトです。</p><p class="sm-2">私がエンジニアとしての活動内容と、成長した記録をまとめています。</p><p class="sm-2">「あなたに私の魅力が伝わって欲しい」そんな想いでこのサイトを制作しました。</p><p class="sm-2">どうぞお時間の許す限りサイト内をご散策ください。</p>
+    </div>
+</section>
+
+
+
+<section class="content-container text-center flex-center am" id="Am">
+    <div class="am-box">
+        <h2>About me</h2>
+        <div class="flex-center">
+            <div class="imgbox"><img "alt="アイコン" src="<%= $url_at %>/portfolio/pic.png" /></div>
+            <div class="contbox">はじめまして。<br />長野県出身、平成11年生まれの<%= @data["age"] %>歳エンジニアのたくみと申します。<br />普通科高校を卒業したのち、現在は日本大学で情報工学を学んでいます。<br />高校時代にはワードプレスのテンプレートを作成して遊び、大学入学後はRuby on Railsの魅力に取り憑かれ、webアプリケーションを開発していました。</div>
+        </div>
+        <div class="linkbox">
+            <p>Links:　<%= link_to " Twitter","https://twitter.com/taku_blockchain", class: "fab fa-twitter twitter_icon",target: :_blank %></p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="content-container text-center flex-center skils">
+    <div class="skils-box">
+        <h2>My Skils</h2>
+        <div class="c-0002">
+        <p class="sm-2">私が今までの活動で習得してきたスキルをレーダーチャートで表現しました。</p><p class="sm-2">自分のやりたいことをやるために広く浅くスキルを習得してきたため、全体的に理解が浅く、専門性の低さが弱点です。</p><p class="sm-2">今後はバックエンド系の開発や、スマート・コントラクトの業務に携わる経験を増やし、理解を深めたいと考えています。</p>
+        </div>
+        <div class="flex-center">
+            <div class="chart">
+                <canvas id="myRaderChart"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="myRaderChart1"></canvas>
+            </div>
+            <div class="chart">
+                <canvas id="myRaderChart2"></canvas>
+            </div>
+        </div>
+        <ul>
+            <li>業務で使用したもののみ掲載しています</li>
+            <li>レーダーチャートの数字は「1: 触ったことがある程度」、「2: 実務で使用しているがもう少し習熟が必要」、「3: 実務レベルで自由に駆使できる」ということを表しています</li>
+        </ul>
+    </div>
+</section>
+
+<section class="content-container text-center flex-center works" id="works">
+    <div class="works-box">
+        <h2>Works</h2>
+        <p>私が今まで制作してきた作品の一部をご紹介します。</p>
+        <div class="w-container flex-center">
+            <label for="trigger4">
+                <img "alt="アイコン" src="<%= $url_at %>/portfolio/Proofly.jpeg" />
+                <p>Proofly</p>
+            </label>
+            
+            <label for="trigger2">
+                 <img "alt="music.branchwith" src="<%= $url_at %>/portfolio/musicBW.jpeg" />
+                 <p>music.branchwith</p>
+             </label>
+             <label for="trigger3">
+                 <img "alt="アイコン" src="<%= $url_at %>/portfolio/bitcoinex1.jpeg" />
+                 <p>Bitcoin explorer</p>
+             </label>
+        </div>
+        <div class="w-container flex-center">
+            
+            <label for="trigger">
+                <img "alt="Takumi's portfolio" src="<%= $url_at %>/portfolio/takumiPortfolio.jpeg" />
+                <p>Takumi's Portfolio</p>
+            </label>
+            <label for="trigger1">
+                <img "alt="techlife.branchwith" src="<%= $url_at %>/portfolio/techlife.jpeg" />
+                <p>techlife.branchwith</p>
+            </label>
+            <div>
+                <img "alt="アイコン" src="<%= $url_at %>/portfolio/cms.png" />
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="text-center flex-center contact" id="contact">
+    <div class="contact-box">
+        <h2>Contact</h2>
+        <p class="sm-2">最後までご覧いただきありがとうございました。あなたに私の魅力が少しでも伝わったら嬉しいです。</p><p class="sm-2">もしこのサイトや私について何かありましたらTwitterのDMにご連絡ください。</p>
+        <a class="nextbox topns fab fa-twitter twitter_icon" href="https://twitter.com/taku_blockchain" target="_blank"> Twitter</a>
+    </div>
+</section>
+ <footer class="flex-center">
+<p>© 2019 - <%= @data["year"] %>　Takumi's portfolio<br />powerd by Ruby on Rails 5.1.7</p>
+</footer>
+
+<%# ポップアップウィンドウ %>
+<div class="popup_wrap">
+<input id="trigger" type="checkbox">
+    <div class="popup_overlay">
+        <label for="trigger" class="popup_trigger"></label>
+        <div class="popup_content">
+            <label for="trigger" class="close_btn">×</label>
+            <div class="left">
+                <img "alt="Takumi's portfolio" src="<%= $url_at %>/portfolio/takumiPortfolio.jpeg" />
+            </div>
+            <div class="right">
+                <div class="h-line">Takumi's portfolio</div>
+                <div class="lineIncontentbox">
+                    <p>このwebページです。フロントエンド言語としてHTML、SCSS 、jQueryを使用し、バックエンド言語としてRubyを使用しています。また、RubyのフレームワークとしてRuby on Railsを使用しています。<br />「自分の魅力は分かりやすく、直感的であるランディングページでなければ伝わらない」という理念のもと制作しました。</p>
+                    
+                    <p>制作時間: 8時間</p><p>運営開始日: 2020年1月21日</p><p>運営期間: <%= @data["portfolioOP"] %></p>
+                </div>
+                <div class="h-line">使用言語、フレームワーク等</div>
+                <div class="lineIncontentbox">
+                    <p>HTML、SCSS(CSS)、jQuery(javaScript)、Chart.js、Ruby、Ruby on Rails、git、Heroku</p>
+                </div>
+                <div class="h-line">Links</div>
+                <div class="lineIncontentbox flex-left fl-wrap">
+                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/techlife.branchwith" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup_wrap">
+<input id="trigger1" type="checkbox">
+    <div class="popup_overlay">
+        <label for="trigger1" class="popup_trigger"></label>
+        <div class="popup_content">
+            <label for="trigger1" class="close_btn">×</label>
+            <div class="left">
+                <img "alt="Takumi's portfolio" src="<%= $url_at %>/portfolio/techlife.jpeg" />
+            </div>
+            <div class="right">
+                <div class="h-line">techlife.branchwith</div>
+                <div class="lineIncontentbox">
+                    <p>私がメインで更新しているサイトです。私のエンジニアとしての活動記録を公開しています。</p>
+                    <p>フロントエンド言語としてHTML、SCSS 、jQueryを使用し、バックエンド言語としてRubyを使用しています。また、RubyのフレームワークとしてRuby on Railsを使用しています。</p>
+                    <p>制作時間: 3日</p><p>運営開始日: 2020年1月21日</p><p>運営期間: <%= @data["portfolioOP"] %></p>
+                </div>
+                <div class="h-line">使用言語、フレームワーク等</div>
+                <div class="lineIncontentbox">
+                    <p>HTML、SCSS(CSS)、jQuery(javaScript)、Chart.js、Ruby、Ruby on Rails、git、Heroku</p>
+                </div>
+                <div class="h-line">Links</div>
+                <div class="lineIncontentbox flex-left fl-wrap">
+                    <a class="linkblock LBcolor1" href="/" target="_blank">Demo</a>
+                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/techlife.branchwith" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup_wrap">
+<input id="trigger2" type="checkbox">
+    <div class="popup_overlay">
+        <label for="trigger2" class="popup_trigger"></label>
+        <div class="popup_content">
+            <label for="trigger2" class="close_btn">×</label>
+            <div class="left">
+                <img "alt="music.branchwith" src="<%= $url_at %>/portfolio/musicBW.jpeg" />
+            </div>
+            <div class="right">
+                <div class="h-line">music.branchwith</div>
+                <div class="lineIncontentbox">
+                    <p>初めてRuby on Railsを使用したwebサイトです。Ruby on Railsを学習しながら制作したため、制作時間がかなりかかってしまいました。Herokuのschedulerを用いることで、毎日定刻にweb上から歌詞をスクレイピングし、DBに格納ののち、urlを生成して歌詞を自動公開しています。</p>
+                <p>また、スクレイピングした歌詞のYoutube動画のurlをGoogleAPIで取得し、自動で再生できるようにしています。（現在はquotaが足りないため停止）</p>
+                    <p>サイト内の記事はほとんど全てclowdworksで募集したライターさんに執筆していただいています。（現在はProoflyに移行）</p>
+                    <p>制作時間: ３ヶ月</p><p>運営開始日: 2018年10月29日</p><p>運営期間: <%= @data["mbwOP"] %></p>
+                </div>
+                <div class="h-line">使用言語、フレームワーク等</div>
+                <div class="lineIncontentbox">
+                    <p>HTML、SCSS(CSS)、React.js、javaScript、Ruby、PostgreSQL、Sqlite（開発）、mySQL（開発）、Ruby on Rails、git、Heroku等</p>
+                </div>
+                <div class="h-line">Links</div>
+                <div class="lineIncontentbox flex-left fl-wrap">
+                    <a class="linkblock LBcolor1" href="https://mbw6.herokuapp.com" target="_blank">Demo</a>
+                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/music.branchwith" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup_wrap">
+<input id="trigger3" type="checkbox">
+    <div class="popup_overlay">
+        <label for="trigger3" class="popup_trigger"></label>
+        <div class="popup_content">
+            <label for="trigger3" class="close_btn">×</label>
+            <div class="left">
+                <img "alt="Bitcoin explorer" src="<%= $url_at %>/portfolio/bitcoinex1.jpeg" />
+            </div>
+            <div class="right">
+                <div class="h-line">Bitcoin explorer</div>
+                <div class="lineIncontentbox">
+                    <p>Bitcoinのブロックヘッダーやトランザクションなどを簡単に見ることができるサイトです。ブロックチェーンが一般な人にもっと身近なものになって欲しいという願いの元制作しました。</p>
+                        <p>VPSのCentOS7上にbitcoindをインストールして起動し、bitcoin-cli経由のwebAPIを作成して、そこから値を取得しています。</p>
+                        <p>このサービスの開発記は、techlife.branchwith上で公開しています。Linksからご覧ください。</p>
+                    <p>制作時間: 10日</p><p>運営開始日: 2020年2月11日</p><p>運営期間: <%= @data["bitcoinexOP"] %></p>
+                </div>
+                <div class="h-line">使用言語、フレームワーク、ソフトウェア等</div>
+                <div class="lineIncontentbox">
+                    <p>HTML、SCSS(CSS)、jQuery(javaScript)、Apache、Bitcoin-cli、Ruby、Ruby on Rails、git、Heroku、CentOS7</p>
+                </div>
+                <div class="h-line">Links</div>
+                <div class="lineIncontentbox flex-left fl-wrap">
+                    <a class="linkblock LBcolor1" href="/blockchain/btc_exproler" target="_blank">Demo</a>
+                    <a class="linkblock LBcolor1" href="https://techlife.branchwith.com/category/FSL1Ze9LT7UH5jpZlfWU" target="_blank">開発記</a>
+                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/techlife.branchwith" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup_wrap">
+<input id="trigger4" type="checkbox">
+    <div class="popup_overlay">
+        <label for="trigger4" class="popup_trigger"></label>
+        <div class="popup_content">
+            <label for="trigger4" class="close_btn">×</label>
+            <div class="left">
+                <img "alt="Bitcoin explorer" src="<%= $url_at %>/portfolio/Proofly.jpeg" />
+            </div>
+            <div class="right">
+                <div class="h-line">Proofly</div>
+                <div class="lineIncontentbox">
+                    <p>indexを承認制にした文章投稿サイトです。記事をERC721の規格に沿ってトークン化し著作権を紐付け、トークンを売買することで、記事の著作権を”スマートに”移動できる環境の構築を目指しています。</p>
+                        <p>ゆくゆくは画像や動画などもトークン化し、コンテンツに価値をつけ、画像を公開するだけで収入を得られる社会を目指しています。</p>
+                        <p>現在は、記事の有料化あたりを製作中です・・・</p>
+                    <p>制作時間: 3ヶ月〜</p><p>運営開始日: 2020年5月12日</p>
+                </div>
+                <div class="h-line">使用言語、フレームワーク等</div>
+                <div class="lineIncontentbox">
+                    <p>HTML、SCSS(CSS)、jQuery(javaScript)、Ruby、Ruby on Rails、ethereum、solidity、git、Heroku</p>
+                </div>
+                <div class="h-line">Links</div>
+                <div class="lineIncontentbox flex-left fl-wrap">
+                    <a class="linkblock LBcolor1" href="https://www.proofly.jp" target="_blank">Demo</a>
+                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/Proofly" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <script>
+    //charts
+    var ctx = document.getElementById("myRaderChart");
+    var myRadarChart = new Chart(ctx, {
+        type: 'radar',
+        data: {
+            labels: ["HTML","CSS","SCSS","React","javaScript","jQuery"],
+            datasets: [{
+                label: 'Flont-end',
+                data: [3,3,3,2,2,2],
+                backgroundColor: 'RGBA(174, 215, 255, 0.5)',
+                borderColor: 'RGBA(174, 215, 255, 1)',
+                borderWidth: 1,
+                pointBackgroundColor: 'RGBA(174, 215, 255, 1)',
+                pointBorderColor:'white',
+                pointRadius:2,
+                pointHitRadius:2
+            }]
+        },
+        options: {
+            title: {
+                display: false,
+                text: 'フロントエンド'
+            },
+            scale:{
+                ticks:{
+                    suggestedMin: 0,
+                    suggestedMax: 3,
+                    stepSize: 1,
+                    callback: function(value, index, values){
+                        return  value
+                    }
+                }
+            }
+        }
+    });
+    var ctx1 = document.getElementById("myRaderChart1");
+    var myRadarChart = new Chart(ctx1, {
+        type: 'radar',
+        data: {
+            labels: ["Java","PHP","Ruby","MySQL","PostgreSQL","Python"],
+            datasets: [{
+                label: 'Back-end',
+                data: [2,2,2,2,2,1],
+                backgroundColor: 'RGBA(62, 159, 255, 0.5)',
+                borderColor: 'RGBA(62, 159, 255, 1)',
+                borderWidth: 1,
+                pointBackgroundColor: 'RGBA(62, 159, 255,1)',
+                pointBorderColor:'white',
+                pointRadius:2,
+                pointHitRadius:2
+            }]
+        },
+        options: {
+            title: {
+                display: false,
+                text: 'フロントエンド'
+            },
+            scale:{
+                ticks:{
+                    suggestedMin: 0,
+                    suggestedMax: 3,
+                    stepSize: 1,
+                    callback: function(value, index, values){
+                        return  value
+                    }
+                }
+            }
+        }
+    });
+    var ctx2 = document.getElementById("myRaderChart2");
+    var myRadarChart = new Chart(ctx2, {
+        type: 'radar',
+        data: {
+            labels: ["Solidity","Vyper","Ruby on Rails","Git","AWS","Truffle"],
+            datasets: [{
+                label: 'other',
+                data: [1,1,2,2,2,1],
+                backgroundColor: 'RGBA(62, 159, 255, 0.5)',
+                borderColor: 'RGBA(62, 159, 255, 1)',
+                borderWidth: 1,
+                pointBackgroundColor: 'RGBA(62, 159, 255,1)'
+            }]
+        },
+        options: {
+            title: {
+                display: false,
+                text: 'フロントエンド'
+            },
+            scale:{
+                ticks:{
+                    suggestedMin: 0,
+                    suggestedMax: 3,
+                    stepSize: 1,
+                    callback: function(value, index, values){
+                        return  value
+                    }
+                }
+            }
+        }
+    });
+    $(function(){
+        $('a[href^="#"]').click(function(){
+            var speed = 1000;
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $("html, body").animate({scrollTop:position}, speed, "swing");
+            return false;
+        });
+    });
+   $(function(){
+       $(".ats-box h2,.ats-box p,.am-box h2,.am-box div div,.skils-box h2,.skils-box p,.skils-box div div,.skils-box ul,.works-box h2,.works-box p,.works-box div").addClass("fade_off");
+     $(window).scroll(function (){
+       $(".ats-box h2,.ats-box p,.am-box h2,.am-box div div,.skils-box h2,.skils-box p,.skils-box div div,.skils-box ul,.works-box h2,.works-box p,.works-box div,.contact-box h2,.contact-box p,.contact-box a").each(function(){
+         var imgPos = $(this).offset().top;
+         var scroll = $(window).scrollTop();
+         var windowHeight = $(window).height();
+         if (scroll > imgPos - windowHeight + windowHeight/5){
+           $(this).addClass("fade_on");
+         } else {
+           $(this).removeClass("fade_on");
+         }
+       });
+     });
+   });
+   
+
+   $(function(){
+       var scrollPosition;
+       $(".w-container > label").on("click", function() {
+           scrollPosition = $(window).scrollTop();
+           $('html,body').addClass('fixed').css({'top': -scrollPosition});
+       });
+       $(".popup_trigger,.close_btn").on("click", function() {
+           $('html,body').removeClass('fixed').css({'top': 0});
+           window.scrollTo( 0 , scrollPosition );
+       });
+   });
+    </script>
+

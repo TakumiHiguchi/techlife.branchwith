@@ -1,0 +1,75 @@
+<%# タイトル等設定 %>
+<% provide(:title,@postdata.title) %>
+<% provide(:description,strip_tags(@postdata.content).truncate(150)) %>
+<% provide(:tw_img,"#{$url_at}/techlife/thum/#{@postdata.thumbnail_path}") %>
+<%#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+<%= render 'tmp/header' %>
+<div class="articleContainer">
+<main>
+    <div class="main_flame">
+        <img "alt="<%= @postdata.title %>のサムネイル" src="<%= $url_at %>/techlife/thum/<%= @postdata.thumbnail_path %>" />
+        <h1 class="inpPost-h1"><%= @postdata.title %></h1>
+        <div class="inpPost-auther_date_box">
+            <div><a><img src="<%= $url_at %>/main/icon5.png">Takumi</a><span>最終更新： <time><%= @postdata.updated_at.strftime("%Y年%m月%d日") %></time></span></div>
+        </div>
+        <div class="toc_box">
+                <dl id="index">
+                    <dt>目次</dt>
+                </dl>
+        </div>
+        <div class="articleBox">
+            <%= @postdata.content.html_safe %>
+        </div>
+        <div class="comentContainer">
+            <h3>コメント</h3>
+            <% @coments.each do |p| %>
+            <div class="comentBox">
+                <div class="top">
+                    <div><%= p.name %></div><div><%= p.created_at.strftime("%Y年%m月%d日 %H:%M:%S") %></div>
+                </div>
+                <div class="bottom">
+                    <%= p.coment %>
+                </div>
+            </div>
+            <% end %>
+            <h3>コメントを残す</h3>
+            <%= form_for @e,:url => {:action => :create} do |f| %>
+                <div class="attrb">
+                    <p>名前（必須）</p>
+                    <%= f.text_field :name,:class => "name_input" ,:placeholder => "名前" %>
+                </div>
+                <div class="attrb">
+                    <p>コメント（必須）</p>
+                    <%= f.text_area :coment,:class => "title_input" ,:placeholder => "コメント" %>
+                    <%= f.hidden_field :key, :value => @postdata.key %>
+                </div>
+                <%= f.submit "コメントを送信する",:class=>"submit-input" %>
+            <% end %>
+        </div>
+
+    </div>
+</main>
+<%= render 'tmp/sidebar_article' %>
+</div>
+<% if signed_in? then %><%# 管理者か確認 %>
+<div class="fix adminfixedbox adminInf">
+    <div>URL : <%=request.url.to_s%></div>
+    <div>PV : </div>
+    <div>author : </div>
+    <div>Links : <a href="/editpost">Postの編集</a><a href="/editpost/<%= @postdata.id %>/edit">この記事の編集</a></div>
+</div>
+<% end %>
+<%= render 'tmp/footer' %>
+<script>
+    //目次
+    $(function(){
+        var countId = 0
+        $(".articleBox h2,.articleBox h3,.comentContainer h3").each(function(){
+            var ttl = $(this).text();
+            this.id = 'ttl-' + countId;
+            var lv = $(this).prop("tagName");
+            $("#index").append('<dd class="lv_'+lv+'"><a href="#'+this.id+'">'+ttl+'</a></dd>');
+            countId++;
+        });
+    });
+</script>

@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag "editpost", :media => "all" %>
+<%= render 'tmp/header' %>
+<div class="editPostContainer">
+    <%= render 'tmp/epMenu' %>
+    <div class="mainContainer">
+        <%= form_for @e,:url => {:action => :create} do |f| %>
+            <%= f.text_field :name,:class => "title_input" ,:placeholder => "カテゴリー名" %>
+            <%= f.text_field :parent_id,:class => "title_input" ,:placeholder => "親カテid" %>
+            <%= f.submit "登録" %>
+        <% end %>
+    </div>
+</div>

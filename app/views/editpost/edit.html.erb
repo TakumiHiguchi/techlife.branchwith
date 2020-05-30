@@ -1,0 +1,22 @@
+<%= render 'tmp/header' %>
+<div class="editPostContainer">
+    <%= render 'tmp/epMenu' %>
+    <div class="mainContainer">
+        <%= form_for @e,:url => {:action => :update} do |f| %>
+            <%= f.text_field :title ,:class => "title_input"%>
+            <div class="t-fieldbox">
+                <%= f.text_field :thumbnail_path ,:placeholder => "サムネイルpath(ex: aaaa.png)"%>
+                <%= f.text_field :author_key,:placeholder => "authorid" %>
+                <%= f.text_field :key ,:placeholder => "key"%>
+            </div>
+            <%= f.text_area :content %>
+            <%= f.text_area :pickup_content %>
+            </p>
+
+
+            <%= f.submit "登録" %>
+        <% end %>
+    </div>
+</div>
+
+

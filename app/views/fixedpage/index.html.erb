@@ -1,0 +1,68 @@
+<%# タイトル等設定 %>
+<% provide(:description,"techlife.branchwithのトップページです。") %>
+<%#----------------------------------------------------------------------------------------------------------------------------------------------------------------------------%>
+<header class="mastheader">
+    <div class="header-container text-center">
+        <h1 class="headfont1">techlife.branchwith</h1>
+        <p class="headfont2 er-1">Takumi's engineering blog</p>
+        <div class="flex-center">
+            <a class="nextbox" href="/portfolio/#Am" target="_blank">What is Takumi like?</a>
+        </div>
+    </div>
+    <a class="nextarrow fuwa_box" href="#aks">
+        <div class="arrow"></div>
+    </a>
+</header>
+<div class="articleContainer">
+    <main>
+        <div class="main_flame">
+            <div class="articleBox">
+                <% @postdatas.each do |pass| %>
+                    <div href="article/<%= pass.key %>" class="postsDatabox">
+                        <div class="left">
+                            <img "alt="<%= pass.title %>のサムネイル" src="<%= $url_at %>/techlife/thum/<%= pass.thumbnail_path %>" />
+                        </div>
+                        <div class="right">
+                            <h2 id="aks"><%= pass.title %></h2>
+                            <div class="linkbox">
+                            <% pass.post_category_relations.each do |a| %>
+                                <a href="/category/<%= a.category.key %>" class="fas fa-book icon" target="_blank"><span> <%= a.category.name %></span></a>
+                            <% end %>
+                            </div>
+                            <div class="date">Author : Takumi&nbsp;作成日 : <%= pass.created_at.strftime('%Y年%m月%d日') %>&nbsp;更新日 : <%= pass.updated_at.strftime('%Y年%m月%d日') %></div>
+                        </div>
+                    </div>
+                    <div class="content_area">
+                        <p style="font-weight:bold;">記事のポイント</p>
+                        <div><%= pass.pickup_content.html_safe %></div>
+                    </div>
+                    <a href="article/<%= pass.key %>"class="nbtn alo">この記事を読む</a>
+                    
+                <% end %>
+            </div>
+
+        </div>
+    </main>
+    <%= render 'tmp/sidebar_top' %>
+</div>
+<%= render 'tmp/footer' %>
+<% if signed_in? then %><%# 管理者か確認 %>
+<div class="fix adminfixedbox adminInf">
+    <div>URL : <%=request.url%></div>
+    <div>PV : </div>
+    <div>author : </div>
+    <div>Links : <a href="/editpost">Postの編集</a></div>
+</div>
+<% end %>
+<script>
+    $(function(){
+        $('a[href^="#"]').click(function(){
+            var speed = 1000;
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $("html, body").animate({scrollTop:position}, speed, "swing");
+            return false;
+        });
+    });
+</script>

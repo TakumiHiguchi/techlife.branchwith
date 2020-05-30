@@ -1,0 +1,10 @@
+<%= stylesheet_link_tag "header", :media => "all" %>
+<header class="main_header" oncontextmenu="return false;">
+    <%= link_to "/", class: "top_icon" do -%>
+        <img "alt="techlife.branchwith" src="<%= $url_at %>/techlife/main/icon.png" />
+    <% end -%>
+    <div>
+        <%= link_to "","https://twitter.com/taku_blockchain", class: "twitter_icon",target: :_blank -%>
+        <%= link_to "","https://twitter.com/taku_blockchain", class: "fab fa-instagram sk",target: :_blank -%>
+    </div>
+</header>

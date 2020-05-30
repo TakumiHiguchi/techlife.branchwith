@@ -1,0 +1,26 @@
+
+<%= render 'tmp/header' %>
+<div class="editPostContainer">
+    <%= render 'tmp/epMenu' %>
+    <div class="mainContainer">
+        
+        <%= form_for @e,:url => {:action => :create,:model => @post} do |f| %>
+            <%= f.text_field :title,:class => "title_input" ,:placeholder => "タイトル" %>
+            <div class="t-fieldbox">
+                <%= f.text_field :thumbnail_path ,:placeholder => "サムネイルpath(ex: aaaa.png)"%>
+                <%= f.text_field :author_key,value: "techlife.blockchain" %>
+            </div>
+            <%= f.label :category, 'カテゴリ' %>
+            <%= f.collection_check_boxes(:category_ids, Category.all, :id, :name) do |x| %>
+              <%= x.label do %>
+                <%= x.check_box %>
+                <%= x.text %>
+              <% end %>
+            <% end %>
+            
+            <%= f.text_area :content %>
+            <%= f.text_area :pickup_content,value: "<ul><li></li><li></li><li></li></ul>" %>
+            <%= f.submit "登録" %>
+        <% end %>
+    </div>
+</div>

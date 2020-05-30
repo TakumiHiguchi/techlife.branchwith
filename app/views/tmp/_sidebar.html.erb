@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag "sidebar", :media => "all" %>
+<div class="writerContainer">
+    <h2><span>Author</span></h2>
+    <img "alt="takumi" src="<%= $url_at %>/techlife/main/auther.png" />
+    <p>長野県出身、平成11年生まれの20歳エンジニア。食べることとコーヒーと音楽が好き。<br />大学入学後はRuby on Railsの魅力に取り憑かれ、webアプリケーションを開発していました。</p>
+    <div class="linkbox">
+        <p>Links:　<%= link_to " Twitter","https://twitter.com/taku_blockchain", class: "fab fa-twitter twitter_icon",target: :_blank %><a href="/portfolio" class="fas fa-book icon" target="_blank"><span> Portfolio</span></a></p>
+    </div>
+</div>
+<div class="cateb">
+    <h2><span>Service</span></h2>
+    <div class="categoryContainer">
+        <a class="far fa-sticky-note p-categoryBox" href="https://music.branchwith.com"> <span>music.branchwith</span></a>
+        <a class="far fa-sticky-note p-categoryBox" href="/blockchain/btc_exproler"> <span>Bitcoin Exproler</span></a>
+    </div>
+</div>
+<div class="cateb">
+    <h2><span>Category</span></h2>
+    <div class="categoryContainer">
+        <% @categorydatas.each do |pass| %>
+            <% if pass.parent_id==nil then %>
+                <a class="far fa-sticky-note p-categoryBox" href="/category/<%= pass.key %>"> <span><%=pass.name %></span></a>
+                <%  c=@categorydatas.find(pass.id).children %>
+                <% c.each do |p| %>
+                    <a class="fas fa-angle-right c-categoryBox" href="/category/<%= p.key %>"> <span><%=p.name %></span></a>
+                <% end %>
+            
+            <% end %>
+        <% end %>
+    </div>
+</div>
+
+<div class="newPostContainer">
+    <h2><span>NewPosts</span></h2>
+    <% @postdatas.each do |pass| %>
+        <div class="postContainer">
+            <a href="/article/<%= pass.key %>">
+                <img "alt="<%= pass.title %>のサムネイル" src="<%= $url_at %>/techlife/thum/<%= pass.thumbnail_path %>" />
+                <div><%= pass.title %></div>
+            </a>
+        </div>
+    <% end %>
+    <a href="/" class="nbtn">NewPostをもっと見る</a>
+</div>
