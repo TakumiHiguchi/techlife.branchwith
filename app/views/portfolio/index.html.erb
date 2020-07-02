@@ -75,18 +75,21 @@
                 <img "alt="アイコン" src="<%= $url_at %>/portfolio/Proofly.jpeg" />
                 <p>Proofly</p>
             </label>
-            
+            <label for="trigger5">
+                <img "alt="music.branchwith" src="<%= $url_at %>/portfolio/musicBW.jpeg" />
+                <p>N:urture</p>
+            </label>
             <label for="trigger2">
                  <img "alt="music.branchwith" src="<%= $url_at %>/portfolio/musicBW.jpeg" />
                  <p>music.branchwith</p>
              </label>
-             <label for="trigger3">
-                 <img "alt="アイコン" src="<%= $url_at %>/portfolio/bitcoinex1.jpeg" />
-                 <p>Bitcoin explorer</p>
-             </label>
+             
         </div>
         <div class="w-container flex-center">
-            
+            <label for="trigger3">
+                <img "alt="アイコン" src="<%= $url_at %>/portfolio/bitcoinex1.jpeg" />
+                <p>Bitcoin explorer</p>
+            </label>
             <label for="trigger">
                 <img "alt="Takumi's portfolio" src="<%= $url_at %>/portfolio/takumiPortfolio.jpeg" />
                 <p>Takumi's Portfolio</p>
@@ -95,10 +98,6 @@
                 <img "alt="techlife.branchwith" src="<%= $url_at %>/portfolio/techlife.jpeg" />
                 <p>techlife.branchwith</p>
             </label>
-            <div>
-                <img "alt="アイコン" src="<%= $url_at %>/portfolio/cms.png" />
-                <p></p>
-            </div>
         </div>
     </div>
 </section>
@@ -215,20 +214,20 @@
             <div class="right">
                 <div class="h-line">Bitcoin explorer</div>
                 <div class="lineIncontentbox">
-                    <p>Bitcoinのブロックヘッダーやトランザクションなどを簡単に見ることができるサイトです。ブロックチェーンが一般な人にもっと身近なものになって欲しいという願いの元制作しました。</p>
-                        <p>VPSのCentOS7上にbitcoindをインストールして起動し、bitcoin-cli経由のwebAPIを作成して、そこから値を取得しています。</p>
-                        <p>このサービスの開発記は、techlife.branchwith上で公開しています。Linksからご覧ください。</p>
-                    <p>制作時間: 10日</p><p>運営開始日: 2020年2月11日</p><p>運営期間: <%= @data["bitcoinexOP"] %></p>
+                    <p>日本大学生のための時間割管理アプリです。10年間分の時間割を、学期別に保存して簡単に見ることができます。</p>
+                        <p>React.jsを初めて採用した作品で、SPAで制作しました。</p>
+                        <p>現在製作中のため、DEMOは一部の機能しか公開されていません。</p>
+                    <p>制作時間: -日</p><p>運営開始日: 2020年-月-日</p><p>運営期間: </p>
                 </div>
-                <div class="h-line">使用言語、フレームワーク、ソフトウェア等</div>
+                <div class="h-line">主な使用言語、フレームワーク、ソフトウェア等</div>
                 <div class="lineIncontentbox">
-                    <p>HTML、SCSS(CSS)、jQuery(javaScript)、Apache、Bitcoin-cli、Ruby、Ruby on Rails、git、Heroku、CentOS7</p>
+                    <p>HTML、SCSS(CSS)、React.js、JSX、Ruby、Ruby on Rails、git、Heroku</p>
                 </div>
                 <div class="h-line">Links</div>
                 <div class="lineIncontentbox flex-left fl-wrap">
-                    <a class="linkblock LBcolor1" href="/blockchain/btc_exproler" target="_blank">Demo</a>
-                    <a class="linkblock LBcolor1" href="https://techlife.branchwith.com/category/FSL1Ze9LT7UH5jpZlfWU" target="_blank">開発記</a>
-                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/techlife.branchwith" target="_blank">github</a>
+                    <a class="linkblock LBcolor1" href="http://java.cse.ce.nihon-u.ac.jp/daikibo2020/u306171/" target="_blank">Demo</a>
+                    <a class="linkblock LBcolor1" href="https://github.com/TakumiHiguchi/Nurture-front" target="_blank">github(front)</a>
+                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/Nurture-backendAPI" target="_blank">github(API)</a>
                 </div>
             </div>
         </div>
@@ -264,6 +263,38 @@
         </div>
     </div>
 </div>
+
+<div class="popup_wrap">
+<input id="trigger5" type="checkbox">
+    <div class="popup_overlay">
+        <label for="trigger5" class="popup_trigger"></label>
+        <div class="popup_content">
+            <label for="trigger5" class="close_btn">×</label>
+            <div class="left">
+                <img "alt="Bitcoin explorer" src="<%= $url_at %>/portfolio/Proofly.jpeg" />
+            </div>
+            <div class="right">
+                <div class="h-line">Proofly</div>
+                <div class="lineIncontentbox">
+                    <p>indexを承認制にした文章投稿サイトです。記事をERC721の規格に沿ってトークン化し著作権を紐付け、トークンを売買することで、記事の著作権を”スマートに”移動できる環境の構築を目指しています。</p>
+                        <p>ゆくゆくは画像や動画などもトークン化し、コンテンツに価値をつけ、画像を公開するだけで収入を得られる社会を目指しています。</p>
+                        <p>現在は、記事の有料化あたりを製作中です・・・</p>
+                    <p>制作時間: 3ヶ月〜</p><p>運営開始日: 2020年5月12日</p>
+                </div>
+                <div class="h-line">使用言語、フレームワーク等</div>
+                <div class="lineIncontentbox">
+                    <p>HTML、SCSS(CSS)、jQuery(javaScript)、Ruby、Ruby on Rails、ethereum、solidity、git、Heroku</p>
+                </div>
+                <div class="h-line">Links</div>
+                <div class="lineIncontentbox flex-left fl-wrap">
+                    <a class="linkblock LBcolor1" href="https://www.proofly.jp" target="_blank">Demo</a>
+                    <a class="linkblock LBcolor2" href="https://github.com/TakumiHiguchi/Proofly" target="_blank">github</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
   <script>
     //charts
@@ -308,7 +339,7 @@
             labels: ["Java","PHP","Ruby","MySQL","PostgreSQL","Python"],
             datasets: [{
                 label: 'Back-end',
-                data: [2,2,2,2,2,1],
+                data: [2,2,3,2,2,1],
                 backgroundColor: 'RGBA(62, 159, 255, 0.5)',
                 borderColor: 'RGBA(62, 159, 255, 1)',
                 borderWidth: 1,
