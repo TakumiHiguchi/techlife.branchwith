@@ -12,8 +12,8 @@ Rails.application.routes.draw do
     get "article" => redirect("/")
     get "category/:id" => "fixedpage#category"
     get "category" => redirect("/")
-
-    resources :portfolio, :only => [ :index ]
+    
+    get "portfolio" => redirect("https://takumi-higuchi-portfolio.web.app")
     
     #btc
     get "blockchain/btc_exproler" => "btc_exproler#index"
